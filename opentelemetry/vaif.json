@@ -1,0 +1,4 @@
+{
+  "sun.net.www.protocol.http.HttpURLConnection": ["connect"],
+  "io.opentelemetry.javaagent.instrumentation.tomcat.common.TomcatHelper": ["start"]
+}
