@@ -7,6 +7,7 @@ ADD ./target/ts-admin-travel-service-1.0.jar /app/
 
 COPY ./target/otel.jar /app/otel.jar
 COPY ./target/vaif.json /app/vaif.json
+COPY ./target/enable.json /app/enable.json
 
 CMD java -Dotel.traces.exporter=jaeger \
          -Dotel.exporter.jaeger.endpoint=http://jaeger:14250 \

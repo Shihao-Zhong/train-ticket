@@ -14,6 +14,7 @@ for dir in ts-*; do
             mkdir -p $dir/target
             cp $root_directory/opentelemetry/opentelemetry-javaagent-all.jar $dir/target/otel.jar
             cp $root_directory/opentelemetry/vaif.json $dir/target/vaif.json
+            cp $root_directory/opentelemetry/enable.json $dir/target/enable.json
             echo "build ${dir}"
             docker build -t "$1"/"${dir}" "$dir"
             docker tag "$1"/"${dir}":latest "$1"/"${dir}":"$2"
