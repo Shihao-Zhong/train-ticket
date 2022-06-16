@@ -1,114 +1,114 @@
 {
     "ts-admin-basic-info-service": {
-      "*": 1
+      "*": 0
     },
     "ts-admin-order-service": {
-        "*": 1
+        "*": 0
     },
     "ts-admin-route-service": {
-    "*": 1
+    "*": 0
     },
     "ts-admin-travel-service": {
-    "*": 1
+    "*": 0
     },
     "ts-admin-user-service": {
-    "*": 1
+    "*": 0
     },
     "ts-assurance-service": {
-    "*": 1
+    "*": 0
     },
     "ts-auth-service": {
-    "*": 1
+    "*": 0
     },
     "ts-basic-service": {
-    "*": 1
+    "*": 0
     },
     "ts-cancel-service": {
-    "*": 1
+    "*": 0
     },
     "ts-config-service": {
-    "*": 1
+    "*": 0
     },
     "ts-consign-price-service": {
-    "*": 1
+    "*": 0
     },
     "ts-consign-service": {
-    "*": 1
+    "*": 0
     },
     "ts-contacts-service": {
-    "*": 1
+    "*": 0
     },
     "ts-delivery-service": {
-    "*": 1
+    "*": 0
     },
     "ts-execute-service": {
-    "*": 1
+    "*": 0
     },
     "ts-food-map-service": {
-    "*": 1
+    "*": 0
     },
     "ts-food-service": {
-    "*": 1
+    "*": 0
     },
     "ts-inside-payment-service": {
-    "*": 1
+    "*": 0
     },
     "ts-order-other-servic": {
-    "*": 1
+    "*": 0
     },
     "ts-order-service": {
-    "*": 1
+    "*": 0
     },
     "ts-preserve-other-servic": {
-    "*": 1
+    "*": 0
     },
     "ts-preserve-service": {
-    "*": 1
+    "*": 0
     },
     "ts-price-service": {
-    "*": 1
+    "*": 0
     },
     "ts-rebook-service": {
-    "*": 1
+    "*": 0
     },
     "ts-route-plan-service": {
-    "*": 1
+    "*": 0
     },
     "ts-route-service": {
-    "*": 1
+    "*": 0
     },
     "ts-seat-service": {
-    "*": 1
+    "*": 0
     },
     "ts-security-service": {
-    "*": 1
+    "*": 0
     },
     "ts-station-service": {
-    "*": 1
+    "*": 0
     },
     "ts-ticketinfo-service": {
-    "*": 1
+    "*": 0
     },
     "ts-train-service": {
-    "*": 1
+    "*": 0
     },
 
     "ts-travel-plan-service": {
-    "*": 1
+    "*": 0
     },
 
     "ts-travel-service": {
-    "*": 1
+    "*": 0
     },
 
     "ts-travel2-service": {
-    "*": 1
+    "*": 0
     },
 
     "ts-user-service": {
-    "*": 1
+    "*": 0
     },
     "ts-verification-code-service": {
-    "*": 1
+    "*": 0
     }
   }
