@@ -1,7 +1,7 @@
 
 var reserveApp = new Vue({
     el: '#reserveApp',
-    testResult: [],
+    
     data: {
         from: 'Shang Hai',
         to: 'Su Zhou',
@@ -17,7 +17,8 @@ var reserveApp = new Vue({
         selectedSeats: [],
         email: 'fdse_microservice@163.com',
         password: '111111',
-        verifyCode: '1234'
+        verifyCode: '1234',
+        testResult: [],
     },
     methods: {
         initPage() {
@@ -127,6 +128,7 @@ var reserveApp = new Vue({
             var that = this;
             $('#my-svg').shCircleLoader({namespace: 'runLoad'});
             var begin = window.performance.now();
+            console.log(begin)
             $.ajax({
                 type: "post",
                 url: path,
@@ -153,8 +155,9 @@ var reserveApp = new Vue({
                     $('#my-svg').shCircleLoader('destroy');
                     $("#travel_booking_button").attr("disabled", false);
                     var end = window.performance.now();
-                    console.log('cost' + end-bein + 'time')
-                    testResult.push(end-begin);
+                    console.log(end)
+                    console.log('cost' + end-begin + 'time')
+                    this.testResult.push(end-begin);
                 }
             });
         },
