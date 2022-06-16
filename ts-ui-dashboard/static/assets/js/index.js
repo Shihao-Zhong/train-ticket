@@ -1,6 +1,7 @@
 
 var reserveApp = new Vue({
     el: '#reserveApp',
+    testResult: [],
     data: {
         from: 'Shang Hai',
         to: 'Su Zhou',
@@ -125,6 +126,7 @@ var reserveApp = new Vue({
             $("#travel_booking_button").attr("disabled", true);
             var that = this;
             $('#my-svg').shCircleLoader({namespace: 'runLoad'});
+            var begin = window.performance.now();
             $.ajax({
                 type: "post",
                 url: path,
@@ -150,6 +152,9 @@ var reserveApp = new Vue({
                 complete: function () {
                     $('#my-svg').shCircleLoader('destroy');
                     $("#travel_booking_button").attr("disabled", false);
+                    var end = window.performance.now();
+                    console.log('cost' + end-bein + 'time')
+                    this.testResult.push(end-begin);
                 }
             });
         },
