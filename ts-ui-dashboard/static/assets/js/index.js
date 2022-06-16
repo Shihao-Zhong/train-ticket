@@ -128,7 +128,7 @@ var reserveApp = new Vue({
             var that = this;
             $('#my-svg').shCircleLoader({namespace: 'runLoad'});
             var begin = window.performance.now();
-            console.log(begin)
+            //console.log(begin)
             $.ajax({
                 type: "post",
                 url: path,
@@ -155,10 +155,10 @@ var reserveApp = new Vue({
                     $('#my-svg').shCircleLoader('destroy');
                     $("#travel_booking_button").attr("disabled", false);
                     var end = window.performance.now();
-                    console.log(begin)
-                    console.log(end)
-                    console.log('cost' + end-begin + 'time')
-                    this.testResult.push(end-begin);
+                    //console.log(begin)
+                    //console.log(end)
+                    //console.log('cost' + end-begin + 'time')
+                    that.testResult.push([begin, end]);
                 }
             });
         },
