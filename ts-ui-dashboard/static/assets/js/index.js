@@ -154,7 +154,7 @@ var reserveApp = new Vue({
                     $("#travel_booking_button").attr("disabled", false);
                     var end = window.performance.now();
                     console.log('cost' + end-bein + 'time')
-                    this.testResult.push(end-begin);
+                    testResult.push(end-begin);
                 }
             });
         },
