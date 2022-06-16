@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: ts-ui-dashboard
-        image: zhong950419/ts-ui-dashboard:latest
+        image: zhong950419/ts-ui-dashboard:M05
         imagePullPolicy: Always
         ports:
         - containerPort: 8080
