@@ -11,7 +11,7 @@ COPY ./target/json.jar /app/json.jar
 COPY ./target/vaif.json /app/vaif.json
 COPY ./target/enable.json /app/enable.json
 
-CMD java -cp /app/json.jar \
+CMD java -cp .:/app/json.jar \
          -Dotel.traces.exporter=jaeger \
          -Dotel.exporter.jaeger.endpoint=http://jaeger:14250 \
          -Dotel.metrics.exporter=none \
