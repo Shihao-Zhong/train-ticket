@@ -8,7 +8,7 @@ echo
 root_directory=$(echo "$PWD")
 echo $root_directory
 
-echo ls $root_directory
+eval "ls $root_directory"
 
 for dir in ts-*; do
     if [[ -d $dir ]]; then
