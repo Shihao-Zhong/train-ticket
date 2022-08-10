@@ -8,6 +8,8 @@ echo
 root_directory=$(echo "$PWD")
 echo $root_directory
 
+echo ls $root_directory
+
 for dir in ts-*; do
     if [[ -d $dir ]]; then
         if [[ -n $(ls "$dir" | grep -i Dockerfile) ]]; then
