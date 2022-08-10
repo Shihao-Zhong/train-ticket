@@ -39,4 +39,4 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-buildx-
 
-      - run: make package publish-image Repo=${{ secrets.DOCKER_HUB_USERNAME }} Tag=${GITHUB_REF_NAME}
+      - run: make package publish-image Repo=${{ secrets.DOCKER_HUB_USERNAME }} Tag=${GITHUB_BASE_REF}
