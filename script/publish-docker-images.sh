@@ -1,6 +1,9 @@
 #!/usr/bin/env bash
 set -eux
 
+root_directory=$(echo "$PWD")
+echo $root_directory
+
 echo
 echo "Publishing images, Repo: $1, Tag: $2"
 echo
