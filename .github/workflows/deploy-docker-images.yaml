@@ -1,9 +1,10 @@
 name: Deploy Docker Images
 
-on: 
+on:
+  pull_request_review:
+    types: [submitted]
   pull_request:
-    branches:
-      - master
+    types: [opened, reopened, edited, synchronize]
 
 jobs:
   build-and-deploy:
