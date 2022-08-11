@@ -41,4 +41,4 @@ jobs:
 
       - run: make package 
       
-      - run: make publish-image Repo=${{ secrets.DOCKER_HUB_USERNAME }} Tag=${GITHUB_BASE_REF}
+      - run: make publish-image Repo=${{ secrets.DOCKER_HUB_USERNAME }} Tag=${GITHUB_HEAD_REF}
