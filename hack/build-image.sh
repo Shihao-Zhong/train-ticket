@@ -8,11 +8,14 @@ echo
 root_directory=$(echo "$PWD")
 echo $root_directory
 
+eval "ls $root_directory/opentelemetry"
+
 for dir in ts-*; do
     if [[ -d $dir ]]; then
         if [[ -n $(ls "$dir" | grep -i Dockerfile) ]]; then
             mkdir -p $dir/target
-            cp $root_directory/opentelemetry/opentelemetry-javaagent-all.jar $dir/target/otel.jar
+            cp $root_directory/opentelemetry/opentelemetry-javaagent-all-work.jar $dir/target/otel.jar
+            cp $root_directory/opentelemetry/json.jar $dir/target/json.jar
             cp $root_directory/opentelemetry/vaif.json $dir/target/vaif.json
             cp $root_directory/opentelemetry/enable.json $dir/target/enable.json
             echo "build ${dir}"
