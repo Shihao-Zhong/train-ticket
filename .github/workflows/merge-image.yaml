@@ -1,10 +1,9 @@
 name: Deploy Docker Images
 
 on:
-  pull_request_review:
-    types: [submitted]
-  pull_request:
-    types: [opened, reopened, edited, synchronize]
+  push:
+    branches:
+      - master
 
 jobs:
   build-and-deploy:
@@ -23,7 +22,6 @@ jobs:
           key: ${{ runner.os }}-maven-${{ hashFiles('**/pom.xml') }}
           restore-keys: |
             ${{ runner.os }}-maven-
-
       - uses: docker/login-action@v1
         with:
           username: ${{ secrets.DOCCLAB_DOCKERHUB_USERNAME }}
@@ -38,5 +36,6 @@ jobs:
           key: ${{ runner.os }}-buildx-${{ github.sha }}
           restore-keys: |
             ${{ runner.os }}-buildx-
+      - run: make package 
 
-      - run: make package publish-image Repo=${{ secrets.DOCCLAB_DOCKERHUB_USERNAME }} Tag=${GITHUB_REF#refs/tags/v}
+      - run: make publish-image Repo=${{ secrets.DOCCLAB_DOCKERHUB_USERNAME }} Tag=latest
