@@ -1,10 +1,9 @@
 name: Deploy Docker Images
 
 on:
-  pull_request_review:
-    types: [submitted]
-  pull_request:
-    types: [opened, reopened, edited, synchronize]
+  push:
+    branches:
+      - master
 
 jobs:
   build-and-deploy:
@@ -37,4 +36,6 @@ jobs:
           key: ${{ runner.os }}-buildx-${{ github.sha }}
           restore-keys: |
             ${{ runner.os }}-buildx-
-      - run: make package publish-image Repo=${{ secrets.DOCCLAB_DOCKERHUB_USERNAME }} Tag=${GITHUB_REF#refs/tags/v}
+      - run: make package 
+
+      - run: make publish-image Repo=${{ secrets.DOCCLAB_DOCKERHUB_USERNAME }} Tag=latest
